@@ -16,10 +16,10 @@ export default function InputSearch_component():JSX.Element {
   const handleFocusInput = (e:ChangeEvent) => FocusInput(focus, setFocus, sizeScreen, e)
   const handleFocusButton = () => FocusButton(focus, setFocus, sizeScreen)
 
-  const handleClickButtonSearch = () => (sizeScreen < 768 && (console.log('cliquei')));    
-
   const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
+
+    // Verificar se o focus.button esta TRUE para fazer o SUBMIT
     return
   }
 
