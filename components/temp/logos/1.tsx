@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../../public/images/tmp/logo.png'
 
-export default function Logo1():JSX.Element {
+export default function Logo1_component():JSX.Element {
   return (
     <div>
       <Link href="/">

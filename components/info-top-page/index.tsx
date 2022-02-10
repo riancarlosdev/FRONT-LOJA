@@ -1,6 +1,6 @@
 import { DATA_info_page_top } from "../../datas/info-page-top"
 
-export default function InfoTopPage():JSX.Element {
+export default function InfoTopPage_component():JSX.Element {
   return (
     <div className="flex justify-between items-center h-9">
       {DATA_info_page_top.map((e, i) => {

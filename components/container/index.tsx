@@ -1,7 +1,7 @@
 import { container_type } from "../../types"
 
 
-export default function Container({children, background}:container_type):JSX.Element {
+export default function Container_component({children, background}:container_type):JSX.Element {
 
   const classNamePrime = `w-full ${background}`
   const classNameInter = `max-w-`
