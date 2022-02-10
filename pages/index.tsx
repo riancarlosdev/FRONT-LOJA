@@ -21,7 +21,9 @@ export default function Home():JSX.Element {
   return (
     <main ref={ref}>
       <Container_component background="bg-1">
-        <InfoTopPage_component />
+        <div className='py-1 sm:py-0'>
+          <InfoTopPage_component />
+        </div>
       </Container_component>
 
       <Container_component background="bg-2">
