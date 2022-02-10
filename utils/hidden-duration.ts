@@ -1,6 +1,6 @@
-export const hiddenDuration = (sizeScreen:any, focus:boolean) => {
+export const hiddenDuration = (sizeScreen:any, focus:any):boolean | undefined => {
     if(sizeScreen > 768) {
-        return focus
+        return focus.input
     }
 
     setTimeout(() => {
