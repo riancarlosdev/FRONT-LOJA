@@ -9,7 +9,7 @@ export default function Header_component():JSX.Element {
         <Logo1_component />
       </div>
 
-      <div className="flex items-center space-x-5 w-full">
+      <div className="flex items-center justify-end space-x-5 w-full">
         <InputSearch_component />
 
         <div className="lg:pl-5">

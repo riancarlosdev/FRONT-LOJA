@@ -1,32 +1,22 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
+
+// UTILS
+import { hiddenDuration } from '../../utils/hidden-duration'
 
 export default function InputSearch_component():JSX.Element {
 
   const [ focus, setFocus ] = useState<boolean>(false)
-
-  const handleFocus = () => setFocus(!focus)
-
   const sizeScreen = useSelector(states => states)
+  
+  const handleFocus = () => setFocus(!focus)
+  const handleClickButtonSearch = () => (sizeScreen < 768 && (console.log('cliquei')));    
 
-  useEffect(() => {
+  const handleHidden = hiddenDuration(sizeScreen, focus)
 
-  }, [ sizeScreen ])
-
-  function handleClick() {
-    const responsive:number = window.innerWidth
-
-    if(responsive <= 768) {
-
-    }
-    
-    return
-  }
-
-  function handleSubmit(e:FormEvent) {
+  const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
-
     return
   }
 
@@ -41,7 +31,7 @@ export default function InputSearch_component():JSX.Element {
             onBlur={handleFocus} 
             onFocus={handleFocus} 
           />
-          <span className='absolute top-3 left-7 text-text-2' hidden={sizeScreen > 768 ? focus : true}>Buscar</span>
+          <span className={`absolute top-3 left-7 text-text-2 ${sizeScreen < 768 && 'opacity-0'} duration-500`} hidden={handleHidden}>Buscar</span>
           <button onClick={handleFocus} type='submit' form='form' className='px-4 bg-3 md:bg-opacity-0 h-12 md:h-full absolute top-0 right-0'>
             <BsSearch className='fill-text-2 md:fill-text-2' size={22} />
           </button>
