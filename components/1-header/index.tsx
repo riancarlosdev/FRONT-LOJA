@@ -4,10 +4,16 @@ import InputSearch_component from "./input-search";
 
 export default function Header_component():JSX.Element {
   return (
-    <div className="h-24 flex items-center">
-      <Logo1_component />
+    <div className="h-24 flex items-center space-x-5">
+      <div className="lg:mr-8">
+        <Logo1_component />
+      </div>
+
       <InputSearch_component />
-      <BagCarrinho_component />
+
+      <div className="lg:pl-5">
+        <BagCarrinho_component />
+      </div>
     </div>
   )
 }
