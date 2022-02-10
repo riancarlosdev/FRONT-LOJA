@@ -1,5 +1,6 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
+import { useResizeDetector } from 'react-resize-detector';
 
 export default function InputSearch_component():JSX.Element {
 
@@ -7,7 +8,7 @@ export default function InputSearch_component():JSX.Element {
   const [ focus, setFocus ] = useState<boolean>(false)
 
   const handleFocus = () => setFocus(!focus)
-
+  
   function handleClick() {
     const responsive:number = window.innerWidth
 
