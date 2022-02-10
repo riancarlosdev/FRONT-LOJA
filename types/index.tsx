@@ -7,3 +7,8 @@ export type container_type = {
 export type infoQntBag_type = {
   qnt: number
 }
+
+export type action_type = {
+  payload: any
+  type: string
+}

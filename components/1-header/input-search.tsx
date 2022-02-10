@@ -1,6 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
-import { useResizeDetector } from 'react-resize-detector';
 
 export default function InputSearch_component():JSX.Element {
 
