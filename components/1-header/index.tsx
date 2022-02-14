@@ -4,8 +4,8 @@ import InputSearch_component from "./input-search";
 
 export default function Header_component():JSX.Element {
   return (
-    <div className="h-24 flex items-center justify-between space-x-5">
-      <div className="lg:mr-8">
+    <div className="h-20 flex items-center justify-between space-x-5">
+      <div className="lg:mr-8 mt-2">
         <Logo1_component />
       </div>
 
