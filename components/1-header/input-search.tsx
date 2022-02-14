@@ -1,19 +1,8 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { FormEvent } from 'react'
 import { BsSearch } from 'react-icons/bs'
-import { useSelector } from 'react-redux'
 
-import { hiddenDuration } from '../../utils/hidden-duration'
-import {handleFocusButton as FocusButton, handleFocusInput as FocusInput} from '../../utils/handle-focus-search'
 
 export default function InputSearch_component():JSX.Element {
-
-  const [ focus, setFocus ] = useState({input: false, button:false})
-  const sizeScreen = useSelector(states => states)
-
-  const handleHidden = hiddenDuration(sizeScreen, focus)
-  
-  const handleFocusInput = (e:ChangeEvent) => FocusInput(focus, setFocus, sizeScreen, e)
-  const handleFocusButton = () => FocusButton(focus, setFocus, sizeScreen)
 
   const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
@@ -30,8 +19,8 @@ export default function InputSearch_component():JSX.Element {
             id='search' 
             type="text" 
             maxLength={50} 
+            placeholder="Buscar"
           />
-          <span className={`absolute top-3 left-7 text-text-2 duration-500`} hidden={handleHidden}>Buscar</span>
           <button type='submit' form='form' className='px-4 bg-3 md:bg-opacity-0 h-12 md:h-full absolute top-0 right-0'>
             <BsSearch className='fill-text-2 md:fill-text-2' size={22} />
           </button>
