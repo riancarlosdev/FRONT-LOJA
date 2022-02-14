@@ -7,7 +7,7 @@ export default function Logo1_component():JSX.Element {
     <div>
       <Link href="/">
         <a className="cursor-pointer">
-          <Image width={82} height={56} src={Logo} />
+          <Image width={82} height={56} src={Logo} alt="imagem" />
         </a>
       </Link>
     </div>

@@ -2,7 +2,6 @@ import { ChangeEvent, FormEvent, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
 
-// UTILS
 import { hiddenDuration } from '../../utils/hidden-duration'
 import {handleFocusButton as FocusButton, handleFocusInput as FocusInput} from '../../utils/handle-focus-search'
 
@@ -19,7 +18,7 @@ export default function InputSearch_component():JSX.Element {
   const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
 
-    // Verificar se o focus.button esta TRUE para fazer o SUBMIT
+    // Verificar se o focus.button esta TRUE antes de fazer o SUBMIT
     return
   }
 

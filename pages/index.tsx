@@ -1,6 +1,6 @@
 import { useResizeDetector } from 'react-resize-detector';
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch } from 'react-redux';
 
 import Header_component from "../components/1-header";
 import Container_component from "../components/container";
@@ -16,7 +16,7 @@ export default function Home():JSX.Element {
       type: 'NEW',
       payload: width
     })
-  }, [ width ])
+  }, [ width, dispatch ])
   
   return (
     <main ref={ref}>
