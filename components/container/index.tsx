@@ -1,8 +1,8 @@
 import { container_type } from "../../types"
 
 
-export default function Container_component({children, background}:container_type):JSX.Element {
-  const classNamePrime = `w-full ${background}`
+export default function Container_component({children, background, shadow}:container_type):JSX.Element {
+  const classNamePrime = `w-full ${background} ${shadow && 'shadow-lg'}`
 
   return (
     <div className={classNamePrime}>

@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import Header_component from "../components/1-header";
 import Container_component from "../components/container";
 import InfoTopPage_component from "../components/info-top-page";
+import Categorias_section from '../components/2-sections/categorias';
 
 export default function Home():JSX.Element {
 
@@ -28,6 +29,10 @@ export default function Home():JSX.Element {
 
       <Container_component background="bg-2">
         <Header_component />
+      </Container_component>
+
+      <Container_component shadow={true} background='bg-4'>
+        <Categorias_section />
       </Container_component>
     </main>
   )
