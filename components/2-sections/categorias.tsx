@@ -29,7 +29,7 @@ export default function Categorias_section():JSX.Element {
           ))}
         </ul>
       ) : (
-        <div className="h-full">
+        <div className="h-full select-none">
           <div className="h-full w-full relative">
             <button onClick={handleFocus} id={styles.boxCategorias} className={`h-full hover:bg-text-1 ${active && 'focus:bg-text-1'}`}>
               <div className="cursor-pointer px-5 duration-300 h-full flex items-center space-x-2">

@@ -5,7 +5,7 @@ import { useEffect } from "react"
 
 export default function Container_component({children, background, shadow}:container_type):JSX.Element {
 
-  const classNamePrime = `w-full ${background} ${shadow && 'shadow-lg'}`
+  const classNamePrime = `w-full ${background} ${shadow && 'shadow-md'}`
   
   const { width, ref } = useResizeDetector()
 

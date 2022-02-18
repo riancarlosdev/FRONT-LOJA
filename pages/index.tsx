@@ -34,6 +34,10 @@ export default function Home():JSX.Element {
       <Container_component shadow={true} background='bg-4'>
         <Categorias_section />
       </Container_component>
+
+      <div className='h-36 flex items-center justify-center'>
+        <h1>CONTEUDO</h1>
+      </div>
     </main>
   )
 }
