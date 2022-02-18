@@ -40,7 +40,7 @@ export default function Categorias_section():JSX.Element {
             {active && (
               <ul className={`z-50 py-2 space-y-3 absolute top-12 border-b shadow-lg bg-5 w-52`}>
                 {DATA_categorias.map(e => (
-                  <li>
+                  <li key={e.id}>
                     <article>
                       <Link href={'/as'}>
                         <a className="text-sm text-text-3 hover:text-h-link-3 duration-500 py-1 px-3">{e.name}</a>

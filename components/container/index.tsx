@@ -10,7 +10,7 @@ export default function Container_component({children, background, shadow}:conta
   const { width, ref } = useResizeDetector()
 
   const Dispatch = useDispatch()
-  useEffect(() => { Dispatch({ type: 'NEW', payload: width })}, [ width ])
+  useEffect(() => { Dispatch({ type: 'NEW', payload: width })}, [ width, Dispatch ])
 
   return (
     <div ref={ref} className={classNamePrime}>
