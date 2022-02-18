@@ -1,0 +1,22 @@
+#boxCategorias:hover div h3 {
+  transition: all .3s;
+  color: #083558
+}
+
+#boxCategorias:focus div h3 {
+  color: #083558;
+}
+
+#boxCategorias:focus div svg {
+  fill: #083558;
+}
+
+#boxCategorias:hover div svg {
+  transition: all .3s;
+  fill: #083558
+}
+
+#bgExit {
+  background: rgba(170, 170, 170, 0.116);
+  color: #fdfdfd;
+}

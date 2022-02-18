@@ -15,12 +15,12 @@ export const DATA_categorias = [
     link: '/categoria/roup_femenina'
   },
   {
-    id: 3,
+    id: 4,
     name: 'Moda Masculinas',
     link: '/categoria/roup_masculinas'
   },
   {
-    id: 4,
+    id: 5,
     name: 'Calcados',
     link: '/categoria/calcados'
   }
