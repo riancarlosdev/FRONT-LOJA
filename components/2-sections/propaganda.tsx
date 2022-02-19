@@ -31,7 +31,7 @@ export default function Propaganda_component():JSX.Element {
       responsive={responsive}
       autoPlay={true}
       infinite={true}
-      autoPlaySpeed={4000}
+      autoPlaySpeed={6000}
     >
       <img className='w-full select-none' src={ AtualWidth > 768 ? 'images/tmp/banner-1.jpg' : 'images/tmp/banner mobile.jpg'} alt="" />
       <img className='w-full select-none' src={ AtualWidth > 768 ? 'images/tmp/banner-1.jpg' : 'images/tmp/banner mobile.jpg'} alt="" />
