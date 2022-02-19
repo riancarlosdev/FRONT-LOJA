@@ -40,16 +40,19 @@ export default function CombosSection():JSX.Element {
               <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
             </div>
           ) : (
-            <Carousel
-              responsive={responsive}
-              autoPlay={true}
-              infinite={true}
-              autoPlaySpeed={6000}
-            >
-              <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
-              <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
-              <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
-            </Carousel>
+            <div className={ActualWidth < 555 ? 'flex flex-col items-center' : ''}>
+              <Carousel className={ActualWidth < 555 ? 'max-w-sm' : ''}
+                responsive={responsive}
+                autoPlay={true}
+                infinite={true}
+                autoPlaySpeed={6000}
+                partialVisible={true}
+              >
+                <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
+                <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
+                <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
+              </Carousel>
+            </div>
           )}
         </div>
       </div>
