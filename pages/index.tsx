@@ -6,6 +6,7 @@ import Header_component from "../components/1-header";
 import Container_component from "../components/container";
 import InfoTopPage_component from "../components/info-top-page";
 import Categorias_section from '../components/2-sections/categorias';
+import Propaganda_component from '../components/2-sections/propaganda';
 
 export default function Home():JSX.Element {
 
@@ -35,9 +36,8 @@ export default function Home():JSX.Element {
         <Categorias_section />
       </Container_component>
 
-      <div className='h-36 flex items-center justify-center'>
-        <h1>CONTEUDO</h1>
-      </div>
+      <Propaganda_component />
+      
     </main>
   )
 }

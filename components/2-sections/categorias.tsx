@@ -15,7 +15,7 @@ export default function Categorias_section():JSX.Element {
   const handleFocus = () => setActive(!active)
 
   return (
-    <section className="w-full h-12 flex items-center">
+    <section className="z-50 relative w-full h-12 flex items-center">
       {ActualWidth > 768 ? (
         <ul className="w-full hidden md:flex justify-between items-center">
           {DATA_categorias.map(e => (
