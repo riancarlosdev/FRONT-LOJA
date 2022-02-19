@@ -17,6 +17,13 @@
 }
 
 #bgExit {
-  background: rgba(170, 170, 170, 0.116);
+  background: rgba(42, 42, 42, 0.712);
   color: #fdfdfd;
 }
+
+@media screen and (max-width: 555px) {
+  .carosel {
+    max-width: 384px;
+  }
+}
+

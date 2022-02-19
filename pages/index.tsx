@@ -7,6 +7,7 @@ import Container_component from "../components/container";
 import InfoTopPage_component from "../components/info-top-page";
 import Categorias_section from '../components/2-sections/categorias';
 import Propaganda_component from '../components/2-sections/propaganda';
+import CombosSection from '../components/2-sections/combos';
 
 export default function Home():JSX.Element {
 
@@ -37,7 +38,10 @@ export default function Home():JSX.Element {
       </Container_component>
 
       <Propaganda_component />
-      
+
+      <Container_component background='bg-3'>
+        <CombosSection />      
+      </Container_component>
     </main>
   )
 }

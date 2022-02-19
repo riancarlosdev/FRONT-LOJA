@@ -1,7 +1,7 @@
 
 export type container_type = {
   children: any
-  background: "bg-1" | "bg-2" | "bg-4",
+  background: "bg-1" | "bg-2" | "bg-3" | "bg-4"
   shadow?: boolean
 }
 
