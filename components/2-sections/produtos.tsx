@@ -5,7 +5,7 @@ import Produto_article from "../3-articles/produtos";
 export default function Produtos_section():JSX.Element {
   return (
     <section>
-      <div className={`${DATA_ConfigPage.marginVerticalDeSections}`}>
+      <div className={`mt-24`}>
         <div /*className="flex justify-between items-center"*/>
           <div className="m-auto md:m-0 sm:max-w-sm w-64 sm:w-auto hover:text-text-3 cursor-pointer duration-200 ease-linear">
             <a href="https://rianc-portfolio.vercel.app/">

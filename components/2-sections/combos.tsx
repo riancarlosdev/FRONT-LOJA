@@ -30,7 +30,7 @@ export default function CombosSection():JSX.Element {
 
   return (
     <section>
-      <div className={`${DATA_ConfigPage.marginVerticalDeSections}`}>
+      <div className={'mt-24'}>
         <div>
           <p className="text-xs sm:text-base md:text-left text-center">Aproveite nossos combos por tempo limitado!</p>
           <h2 className="text-center text-2xl sm:text-4xl md:text-left font-bold">Combos imperdíveis</h2>

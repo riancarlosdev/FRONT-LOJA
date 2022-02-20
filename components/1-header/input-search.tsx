@@ -1,12 +1,19 @@
-import { FormEvent } from 'react'
+import { ChangeEvent, FormEvent } from 'react'
 import { BsSearch } from 'react-icons/bs'
 
 
 export default function InputSearch_component({set}:any):JSX.Element {
 
   const handleFocusInput = () => {
-    console.log('OK')
     set(true)
+  }
+
+  const handleBlurInput = (e:ChangeEvent<HTMLInputElement>) => {
+    if(e.target.value !== '') {
+      return
+    }
+    
+    set(false)
   }
 
   const handleSubmit = (e:FormEvent) => {
@@ -20,7 +27,7 @@ export default function InputSearch_component({set}:any):JSX.Element {
     <div className={`ease-in-out duration-700 w-full`}>
       <form onSubmit={handleSubmit} name='form' id='form'>
         <div className='relative overflow-hidden w-full rounded-full'>
-          <input onFocus={handleFocusInput} className={`outline-none md:placeholder:text-lg pl-4 sm:pl-7 text-base sm:text-lg pr-14 w-full h-12`} 
+          <input onFocus={handleFocusInput} onBlur={handleBlurInput} className={`outline-none md:placeholder:text-lg pl-4 sm:pl-7 text-base sm:text-lg pr-14 w-full h-12`} 
             id='search' 
             type="text" 
             maxLength={50} 
