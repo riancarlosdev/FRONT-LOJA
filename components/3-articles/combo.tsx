@@ -12,7 +12,7 @@ export default function ArticleCombo_component({img, description}:ArticleCombo_t
         <img src={img} alt="img" className="w-full" id={styles.minImg} />
 
         <div className="p-4">
-          <p className="text-center leading-normal text-1 md:text-lg font-semibold">{description}</p>
+          <p className="text-center leading-normal text-1 md:text-lg font-normal">{description}</p>
         </div>
       </div>
     </article>

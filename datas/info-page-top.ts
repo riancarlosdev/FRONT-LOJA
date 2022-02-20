@@ -1,6 +1,6 @@
 export const DATA_info_page_top = [
   {
-    col: 'Freete gratís para São Sebastião do Passé',
+    col: 'Alguma informacao para os clientes.',
     link: false,
     inLink: ''
   }

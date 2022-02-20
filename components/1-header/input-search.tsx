@@ -21,8 +21,8 @@ export default function InputSearch_component():JSX.Element {
             maxLength={50} 
             placeholder="Buscar"
           />
-          <button type='submit' form='form' className='px-4 bg-3 md:bg-opacity-0 h-12 md:h-full absolute top-0 right-0'>
-            <BsSearch className='fill-text-2 md:fill-text-2' size={22} />
+          <button type='submit' form='form' className='px-4 md:px-6 bg-text-2 h-12 md:h-full absolute top-0 right-0'>
+            <BsSearch className='fill-1' size={17} />
           </button>
         </div>
       </form>

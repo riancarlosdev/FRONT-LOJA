@@ -6,7 +6,7 @@ export default function BagCarrinho_component():JSX.Element {
     <div className='relative'>
       <InfoQntBag_component qnt={3} />
       <a href="https://www.google.com">
-        <BsHandbagFill className='hover:fill-text-1 ease-in-out duration-500' color='#fff' size={30} />
+        <BsHandbagFill className='hover:fill-h-link-3 ease-in-out duration-500' color='#2e2e2e' size={30} />
       </a>
     </div>
   )

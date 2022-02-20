@@ -27,7 +27,7 @@ export default function Propaganda_component():JSX.Element {
   const AtualWidth = useSelector(state => state)
 
   return (
-    <Carousel className='z-0 mt-2'
+    <Carousel className='z-0 mt-0'
       responsive={responsive}
       autoPlay={true}
       infinite={true}

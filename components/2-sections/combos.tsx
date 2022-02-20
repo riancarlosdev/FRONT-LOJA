@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { useSelector } from "react-redux";
+import { DATA_ConfigPage } from "../../datas/config-page";
 import ArticleCombo_component from "../3-articles/combo";
 
 export default function CombosSection():JSX.Element {
@@ -29,8 +30,11 @@ export default function CombosSection():JSX.Element {
 
   return (
     <section>
-      <div className="mt-10">
-        <h2 className="text-center text-4xl md:text-left font-bold">Combos imperdíveis</h2>
+      <div className={`${DATA_ConfigPage.marginVerticalDeSections}`}>
+        <div>
+          <p>Aproveite nossos combos por tempo limitado!</p>
+          <h2 className="text-center text-4xl md:text-left font-bold">Combos imperdíveis</h2>
+        </div>
 
         <div className="mt-10 ">
           {ActualWidth > 1222 ? (

@@ -13,7 +13,7 @@
 
 #boxCategorias:hover div svg {
   transition: all .3s;
-  fill: #083558
+  fill: #083558;
 }
 
 #bgExit {
