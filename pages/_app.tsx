@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Container_component from '../components/container'
+import Footer_component from '../components/footer'
 import ProviderRedux from '../store'
 import '../styles/globals.css'
 
@@ -16,6 +18,10 @@ export default function MyApp({ Component, pageProps }:any) {
       </Head>
 
       <Component {...pageProps} />
+
+      <Container_component background='bg-4'>
+        <Footer_component />
+      </Container_component>
     </ProviderRedux>
   )
 }

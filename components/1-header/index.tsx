@@ -1,16 +1,22 @@
+import { useState } from "react";
 import Logo1_component from "../temp/logos/1";
 import BagCarrinho_component from "./bag/bag-carrinho";
 import InputSearch_component from "./input-search";
 
 export default function Header_component():JSX.Element {
+
+  const [ focus, setFocus ] = useState<boolean>(false)
+
   return (
-    <div className="h-20 flex items-center justify-between space-x-5">
-      <div className="lg:mr-8 mt-2">
-        <Logo1_component />
-      </div>
+    <div className="duration-500 transition-all h-20 flex items-center justify-between space-x-5">
+      {focus && (
+        <div className="lg:mr-8">
+          <Logo1_component />
+        </div>
+      )}
 
       <div className="flex items-center justify-end space-x-5 w-full">
-        <InputSearch_component />
+        <InputSearch_component set={setFocus} />
 
         <div className="lg:pl-5">
           <BagCarrinho_component />
