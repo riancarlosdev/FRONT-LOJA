@@ -5,17 +5,32 @@ import { AiOutlineCaretDown } from 'react-icons/ai'
 import styles from './styles.module.css'
 
 import { DATA_categorias } from "../../datas/categorias";
-import { LegacyRef, RefObject, useEffect, useRef, useState } from "react";
+import { useState } from "react";
+
+import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock";
 
 export default function Categorias_section():JSX.Element {
 
   const [ active, setActive ] = useState<boolean>(false)
   const ActualWidth = useSelector(state => state)
 
-  const handleFocus = () => setActive(!active)
+  const handleFocus = () => { 
+
+    if(!active) {
+
+      setActive(!active); 
+      disableBodyScroll(document.querySelector('body')!)
+      return
+    }else {
+
+      setActive(false)
+      enableBodyScroll(document.querySelector('body')!)
+      return
+    }
+  }
 
   return (
-    <section className="z-50 relative w-full h-12 flex items-center">
+    <section className="relative w-full h-12 flex items-center">
       {ActualWidth > 768 ? (
         <ul className="w-full hidden md:flex justify-between items-center">
           {DATA_categorias.map(e => (
@@ -51,7 +66,7 @@ export default function Categorias_section():JSX.Element {
               </ul>
             )}
           </div>
-          <div onClick={handleFocus} className={`${!active && 'hidden'} fixed h-screen w-screen left-0`} id={styles.bgExit}></div>
+          <div onClick={handleFocus} className={`${!active && 'hidden'} -z-50 fixed h-screen w-screen left-0 top-0`} id={styles.bgExit}></div>
         </div>
       )}
     </section>

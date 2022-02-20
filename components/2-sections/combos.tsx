@@ -40,7 +40,7 @@ export default function CombosSection():JSX.Element {
               <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
             </div>
           ) : (
-            <div className={ActualWidth < 555 ? 'flex flex-col items-center' : ''}>
+            <div className={ActualWidth < 555 ? 'max-w-sm m-auto' : ''}>
               <Carousel className={ActualWidth < 555 ? 'max-w-sm' : ''}
                 responsive={responsive}
                 autoPlay={true}

@@ -7,7 +7,7 @@ export default function InfoTopPage_component():JSX.Element {
         return e.link ? (
           <a key={i} className="text-link-2 font-semibold text-sm hover:text-h-link-2 duration-500" title="Nossa central de atendimento" href={e.inLink}>{e.col}</a>
         ) : (
-          <span key={i} className="text-text-2 text-xs font-light md:font-semibold sm:text-sm tracking-wide">{e.col}</span>
+          <span key={i} className="text-3 text-xs font-light md:font-semibold sm:text-sm tracking-wide">{e.col}</span>
         )
       })}
     </div>

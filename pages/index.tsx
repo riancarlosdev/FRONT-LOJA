@@ -33,15 +33,17 @@ export default function Home():JSX.Element {
         <Header_component />
       </Container_component>
 
-      <Container_component shadow={true} background='bg-4'>
-        <Categorias_section />
-      </Container_component>
+      <div className='relative z-50'>
+        <Container_component shadow={true} background='bg-4'>
+          <Categorias_section />
+        </Container_component>
+      </div>
 
       <Propaganda_component />
 
-      <Container_component background='bg-3'>
-        <CombosSection />      
-      </Container_component>
+        <Container_component background='bg-3'>
+          <CombosSection />      
+        </Container_component>
     </main>
   )
 }
