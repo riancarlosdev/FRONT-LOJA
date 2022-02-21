@@ -8,11 +8,12 @@ import { DATA_categorias } from "../../datas/categorias";
 import { useState } from "react";
 
 import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock";
+import { redux_type } from "../../types";
 
 export default function Categorias_section():JSX.Element {
 
   const [ active, setActive ] = useState<boolean>(false)
-  const ActualWidth = useSelector(state => state)
+  const ActualWidth = useSelector((state: redux_type) => state.screen)
 
   const handleFocus = () => { 
 
