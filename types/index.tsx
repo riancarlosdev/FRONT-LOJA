@@ -13,3 +13,7 @@ export type action_type = {
   payload: any
   type: string
 }
+
+export type redux_type = {
+  screen: number
+}

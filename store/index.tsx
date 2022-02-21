@@ -1,8 +1,9 @@
 import { createStore } from "redux";
-import { SizeScreenReducer } from "../reducer/sizeScreen.reducer";
 import { Provider } from "react-redux";
 
-export const Store = createStore(SizeScreenReducer)
+import combineReducer from '../reducer/index';
+
+export const Store = createStore(combineReducer)
 
 export default function ProviderRedux({children}:any):JSX.Element {
   return (

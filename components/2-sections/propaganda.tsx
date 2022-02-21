@@ -1,6 +1,7 @@
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { useSelector } from 'react-redux';
+import { redux_type } from '../../types';
 
 const responsive = {
   superLargeDesktop: {
@@ -24,7 +25,7 @@ const responsive = {
 
 export default function Propaganda_component():JSX.Element {
 
-  const AtualWidth = useSelector(state => state)
+  const AtualWidth = useSelector((state:redux_type) => state.screen)
 
   return (
     <Carousel className='z-0 mt-0'

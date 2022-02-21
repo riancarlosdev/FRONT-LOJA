@@ -1,11 +1,11 @@
 import Carousel from "react-multi-carousel";
 import { useSelector } from "react-redux";
-import { DATA_ConfigPage } from "../../datas/config-page";
+import { redux_type } from "../../types";
 import ArticleCombo_component from "../3-articles/combo";
 
 export default function CombosSection():JSX.Element {
 
-  const ActualWidth = useSelector(state => state)
+  const ActualWidth = useSelector((state:redux_type) => state.screen)
 
   const responsive = {
     superLargeDesktop: {
