@@ -7,7 +7,7 @@ const initialState = {
 export default function sidePreviewProduct(state = initialState, action:action_type) {
   switch (action.type) {
     case "ABRIR":
-      return state
+      return state = action.payload
   
     default:
       return state

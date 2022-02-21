@@ -1,8 +1,18 @@
-import { DATA_ConfigPage } from "../../datas/config-page";
+import { useDispatch, useSelector } from "react-redux";
+
 import { DATA_Produtos } from "../../datas/produtos";
+import { DATA_ConfigPage } from "../../datas/config-page";
+
 import Produto_article from "../3-articles/produtos";
 
 export default function Produtos_section():JSX.Element {
+
+  const dispach = useDispatch()
+
+  const handleClickProduto = () => dispach({type: 'ABRIR', payload: {
+    open: true
+  }})
+
   return (
     <section>
       <div className={`mt-24`}>
@@ -16,9 +26,10 @@ export default function Produtos_section():JSX.Element {
 
           <div className="my-10 flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:justify-around"> 
             {DATA_Produtos.map(e => (
-              <Produto_article alt={e.alt} description={e.description} img={e.img} oldPrice={e.oldPrice} price={e.price} title={e.title} key={e.id} />
+              <Produto_article set={handleClickProduto} alt={e.alt} description={e.description} img={e.img} oldPrice={e.oldPrice} price={e.price} title={e.title} key={e.id} />
             ))}
           </div>
+
           {/* <div>
             <ListPageNext_component linkUltimaPage="https://rianc-portfolio.vercel.app/" items={[
               {link: 'https://rianc-portfolio.vercel.app/', page: '1'},

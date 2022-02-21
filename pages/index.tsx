@@ -24,8 +24,8 @@ export default function Home():JSX.Element {
         payload: width
       })
     }
-  }, [ width ])
-  
+  }, [ width, dispatch ])
+
   return (
     <>
       <main ref={ref}>
@@ -39,7 +39,7 @@ export default function Home():JSX.Element {
           <Header_component />
         </Container_component>
 
-        <div className='relative z-50'>
+        <div className='relative z-20'>
           <Container_component shadow={true} background='bg-4'>
             <Categorias_section />
           </Container_component>

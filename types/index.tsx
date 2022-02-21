@@ -16,4 +16,7 @@ export type action_type = {
 
 export type redux_type = {
   screen: number
+  side: {
+    open: boolean
+  }
 }

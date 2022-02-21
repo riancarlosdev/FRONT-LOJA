@@ -1,3 +1,6 @@
+import { useDispatch, useSelector } from "react-redux"
+import { redux_type } from "../../types"
+
 type Produto_Type = {
   title: string
   description: string
@@ -5,11 +8,13 @@ type Produto_Type = {
   price: string
   img: string
   alt: string
+  set?: any
 }
 
-export default function Produto_article({title, description, oldPrice, price, img, alt}:Produto_Type):JSX.Element {
+export default function Produto_article({set, title, description, oldPrice, price, img, alt}:Produto_Type):JSX.Element {
+
   return (
-    <article className="my-5">
+    <article onClick={set} className="my-5 cursor-pointer">
       <div className="w-72 md:max-w-xs space-y-2">
         <div className="relative w-full bg-2">
           <img src={img} alt={alt} />
