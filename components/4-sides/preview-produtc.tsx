@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 export default function SidePreviewProduct_component():JSX.Element {
   return (
-    <aside id={styles.sidepreview} className={`overflow-y-scroll z-50 fixed right-0 bg-3 max-w-md h-screen w-10/12 top-0`}>
+    <aside id={styles.sidepreview} className={`hidden overflow-y-scroll z-50 fixed right-0 bg-3 max-w-md h-screen w-10/12 top-0`}>
       <div className="flex flex-col items-start w-full h-full p-2">
         <div className='space-y-2 flex w-full flex-col'>
           <div className="w-full h-64 bg-text-3"></div>
