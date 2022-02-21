@@ -1,6 +1,6 @@
 import { useResizeDetector } from 'react-resize-detector';
 import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Header_component from "../components/1-header";
 import Container_component from "../components/container";
@@ -11,18 +11,19 @@ import CombosSection from '../components/2-sections/combos';
 import Produtos_section from '../components/2-sections/produtos';
 
 export default function Home():JSX.Element {
+
   const dispatch = useDispatch()
 
   const { width, ref } = useResizeDetector()
 
-  const reduxs = useSelector(state => state)
-
   useEffect(() => {
-    dispatch({
-      type: 'new',
-      payload: 2000
-    })
-  }, [])
+    if(width) {
+      dispatch({
+        type: 'new',
+        payload: width
+      })
+    }
+  }, [ width ])
   
   return (
     <main ref={ref}>

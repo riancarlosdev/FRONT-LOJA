@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { useSelector } from "react-redux";
+
 import { redux_type } from "../../types";
 import ArticleCombo_component from "../3-articles/combo";
 
