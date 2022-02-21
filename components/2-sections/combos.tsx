@@ -52,6 +52,7 @@ export default function CombosSection():JSX.Element {
                 infinite={true}
                 autoPlaySpeed={6000}
                 partialVisible={true}
+                arrows={false}
               >
                 <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />
                 <ArticleCombo_component description="Na compra de 2 pecas a 3 sai por R$39,99" img="/images/tmp/combo-img.jpg" />

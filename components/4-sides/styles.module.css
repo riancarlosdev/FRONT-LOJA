@@ -1,0 +1,21 @@
+#sidepreview {
+  box-shadow: 0 4px 20px rgba(97, 97, 97, 0.685);
+	overflow-y: scroll;
+}
+
+#sidepreview::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#sidepreview::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#sidepreview::-webkit-scrollbar-thumb
+{
+	background-color: #424242;
+}
