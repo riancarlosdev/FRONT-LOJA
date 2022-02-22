@@ -70,3 +70,18 @@ export type ButtonCompra_type = {
   name: string
   link: string
 }
+
+export type VizualizeCompra_type = {
+  frete: string
+  total: string
+  viewProdutos: Array<{
+    preco: string
+    produto: string
+    quantidade: string
+  }>
+}
+
+export type CardFormaPagamento_type = {
+  name: string
+  status?: boolean
+}
