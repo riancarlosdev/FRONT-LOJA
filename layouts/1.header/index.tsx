@@ -7,7 +7,7 @@ import { redux_type } from "../../types";
 // COMPONENTS
 import Logo1_component from "../../components/temp/logos/1";
 import BagCarrinho_component from "../../components/bag/bag-carrinho";
-import InputSearch_component from "../../components/input-search/input-search";
+import InputSearch_component from "../../components/inputs/input-search";
 
 export default function Header_component():JSX.Element {
 

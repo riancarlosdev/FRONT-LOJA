@@ -51,3 +51,22 @@ export type Produto_Type = {
 export type CompraProcess_type = {
   active: number
 }
+
+export type InputCompra_type = {
+  name: string
+  text: string
+  require: boolean
+  placeholder: string
+}
+
+export type CardEndereco_type = {
+  value: string
+  numero: string
+  endereco: string
+  localizacao: string
+}
+
+export type ButtonCompra_type = {
+  name: string
+  link: string
+}

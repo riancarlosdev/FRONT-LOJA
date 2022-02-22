@@ -18,7 +18,8 @@ module.exports = {
       "link-1": "#09D8CB",
       "link-2": "#F6F6F6",
       "h-link-2": "#FFC6E6",
-      "h-link-3": "#083558"
+      "h-link-3": "#083558",
+      "red": "#FF0000"
     }
   },
   plugins: [],

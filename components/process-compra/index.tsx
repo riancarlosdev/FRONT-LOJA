@@ -4,7 +4,7 @@ import { CompraProcess_type } from "../../types";
 export default function ProcessCompra_component({ active }:CompraProcess_type):JSX.Element {
 
   return (
-    <div className="pb-6 border-b-2 w-full flex justify-center">
+    <div className="pb-4 border-b-2 w-full flex justify-center">
       <div className="flex space-x-4">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full bg-text-3 grid place-items-center">
