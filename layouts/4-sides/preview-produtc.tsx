@@ -131,7 +131,7 @@ export default function SidePreviewProduct_component():JSX.Element {
                     <BsFillBagPlusFill size={30} />
                   </span>
 
-                  <Link href={'/'}>
+                  <Link href={'/compra/endereco'}>
                     <a className='bg-h-link-3 text-3 font-semibold w-full flex justify-center items-center'>
                       Comprar Agora
                     </a>

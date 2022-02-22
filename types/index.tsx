@@ -48,3 +48,6 @@ export type Produto_Type = {
   set?: any
 }
 
+export type CompraProcess_type = {
+  active: number
+}
