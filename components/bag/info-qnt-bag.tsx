@@ -1,4 +1,4 @@
-import { infoQntBag_type } from "../../../types";
+import { infoQntBag_type } from "../../types";
 import styles from './styles.module.css'
 
 export default function InfoQntBag_component({qnt}:infoQntBag_type): JSX.Element {

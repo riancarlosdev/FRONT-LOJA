@@ -1,11 +1,7 @@
 import Link from "next/link";
 
-type T = Array<{page: string, link: string}>
-
-type ListPageNext_Type = {
-  items: T
-  linkUltimaPage: string
-}
+// TYPES
+import { ListPageNext_Type } from "../../types";
 
 export default function ListPageNext_component({items, linkUltimaPage}: ListPageNext_Type):JSX.Element {
   return (

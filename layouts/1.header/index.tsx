@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+
+// TYPES
 import { redux_type } from "../../types";
-import Logo1_component from "../temp/logos/1";
-import BagCarrinho_component from "./bag/bag-carrinho";
-import InputSearch_component from "./input-search";
+
+// COMPONENTS
+import Logo1_component from "../../components/temp/logos/1";
+import BagCarrinho_component from "../../components/bag/bag-carrinho";
+import InputSearch_component from "../../components/input-search/input-search";
 
 export default function Header_component():JSX.Element {
 
@@ -24,7 +28,7 @@ export default function Header_component():JSX.Element {
       )}
 
       <div className="flex items-center justify-end space-x-5 w-full">
-        <InputSearch_component set={setFocus} />
+        <InputSearch_component setState={setFocus} />
 
         <div className="lg:pl-5">
           <BagCarrinho_component />

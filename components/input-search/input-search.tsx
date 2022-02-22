@@ -1,21 +1,18 @@
 import { ChangeEvent, FormEvent } from 'react'
 import { BsSearch } from 'react-icons/bs'
 
+// TYPES
+import { InputSearch_type } from '../../types';
 
-export default function InputSearch_component({set}:any):JSX.Element {
+// UTILS
+import { UTILS_BlurInput, UTILS_FocusInput } from '../../utils/handle-input'
 
-  const handleFocusInput = () => {
-    set(true)
-  }
+export default function InputSearch_component({ setState }:InputSearch_type<any>):JSX.Element {
+  
+  const handleFocusInput = () => UTILS_FocusInput(setState);
+  const handleBlurInput = (e:ChangeEvent<HTMLInputElement>) => UTILS_BlurInput(e, setState)
 
-  const handleBlurInput = (e:ChangeEvent<HTMLInputElement>) => {
-    if(e.target.value !== '') {
-      return
-    }
-    
-    set(false)
-  }
-
+  // VOLTAR DEPOIS
   const handleSubmit = (e:FormEvent) => {
     e.preventDefault()
 

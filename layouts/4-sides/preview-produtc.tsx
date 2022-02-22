@@ -1,18 +1,18 @@
 import Link from 'next/link'
-import { BsCheck, BsFillBagPlusFill } from 'react-icons/bs'
-import { useDispatch, useSelector } from 'react-redux'
-import { redux_type } from '../../types'
 import styles from './styles.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { BsCheck, BsFillBagPlusFill } from 'react-icons/bs'
+
+// TYPES
+import { redux_type } from '../../types'
 
 export default function SidePreviewProduct_component():JSX.Element {
 
+  const dispatch = useDispatch()
+
   const openSideViewProduct = useSelector((state: redux_type) => state.side.open)
   
-  const dispatch = useDispatch()
-  
-  const handleClickExitPreviewProduct = () => dispatch({type: 'ABRIR', payload: {
-    open: false
-  }}) 
+  const handleClickExitPreviewProduct = () => dispatch({type: 'ABRIR', payload: {open: false}})
 
   return (
     <>

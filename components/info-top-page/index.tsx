@@ -1,6 +1,7 @@
 import { DATA_info_page_top } from "../../datas/info-page-top"
 
 export default function InfoTopPage_component():JSX.Element {
+  
   return (
     <div className="flex flex-wrap justify-between items-center h-auto sm:h-9">
       {DATA_info_page_top.map((e, i) => {

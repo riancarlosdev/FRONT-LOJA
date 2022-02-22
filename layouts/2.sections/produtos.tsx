@@ -1,17 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
+// DATAS
 import { DATA_Produtos } from "../../datas/produtos";
-import { DATA_ConfigPage } from "../../datas/config-page";
 
+// LAYOUTS
 import Produto_article from "../3-articles/produtos";
 
 export default function Produtos_section():JSX.Element {
 
-  const dispach = useDispatch()
+  const dispach = useDispatch();
 
-  const handleClickProduto = () => dispach({type: 'ABRIR', payload: {
-    open: true
-  }})
+  const handleClickProduto = () => dispach({type: 'ABRIR', payload: {open: true}})
 
   return (
     <section>

@@ -1,34 +1,24 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import { AiOutlineCaretDown } from 'react-icons/ai'
+import { AiOutlineCaretDown } from 'react-icons/ai';
 
+// CSS
 import styles from './styles.module.css'
 
+// DATAS
 import { DATA_categorias } from "../../datas/categorias";
-import { useState } from "react";
 
-import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock";
+// TYPES
 import { redux_type } from "../../types";
+import { UTILS_handleFocus_Categoria } from "../../utils/handle-focus";
 
 export default function Categorias_section():JSX.Element {
 
   const [ active, setActive ] = useState<boolean>(false)
   const ActualWidth = useSelector((state: redux_type) => state.screen)
 
-  const handleFocus = () => { 
-
-    if(!active) {
-
-      setActive(!active); 
-      disableBodyScroll(document.querySelector('body')!)
-      return
-    }else {
-
-      setActive(false)
-      enableBodyScroll(document.querySelector('body')!)
-      return
-    }
-  }
+  const handleFocus = () => UTILS_handleFocus_Categoria(active, setActive)
 
   return (
     <section className="relative w-full h-12 flex items-center">

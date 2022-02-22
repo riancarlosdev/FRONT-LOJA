@@ -1,15 +1,18 @@
-import { useResizeDetector } from 'react-resize-detector';
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { useResizeDetector } from 'react-resize-detector';
 
-import Header_component from "../components/1-header";
+// LAYOUTS
+import Header_component from "../layouts/1.header";
+import CombosSection from '../layouts/2.sections/combos';
+import Produtos_section from '../layouts/2.sections/produtos';
+import Categorias_section from '../layouts/2.sections/categorias';
+import Propaganda_component from '../layouts/2.sections/propaganda';
+import SidePreviewProduct_component from '../layouts/4-sides/preview-produtc';
+
+// COMPONENTS
 import Container_component from "../components/container";
 import InfoTopPage_component from "../components/info-top-page";
-import Categorias_section from '../components/2-sections/categorias';
-import Propaganda_component from '../components/2-sections/propaganda';
-import CombosSection from '../components/2-sections/combos';
-import Produtos_section from '../components/2-sections/produtos';
-import SidePreviewProduct_component from '../components/4-sides/preview-produtc';
 
 export default function Home():JSX.Element {
 

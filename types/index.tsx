@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react"
 
 export type container_type = {
   children: any
@@ -20,3 +21,30 @@ export type redux_type = {
     open: boolean
   }
 }
+
+export type InputSearch_type<T> = {
+  setState: Dispatch<SetStateAction<T>> 
+}
+
+type T = Array<{page: string, link: string}>
+
+export type ListPageNext_Type = {
+  items: T
+  linkUltimaPage: string
+}
+
+export type ArticleCombo_type = {
+  img: string
+  description: string
+}
+
+export type Produto_Type = {
+  title: string
+  description: string
+  oldPrice: string
+  price: string
+  img: string
+  alt: string
+  set?: any
+}
+

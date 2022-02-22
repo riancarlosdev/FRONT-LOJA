@@ -1,33 +1,18 @@
-import Carousel from "react-multi-carousel";
 import { useSelector } from "react-redux";
+import Carousel from "react-multi-carousel";
 
+// TYPES
 import { redux_type } from "../../types";
+
+// DATAS
+import { DATA_responsive_combos } from "../../datas/responsiveis";
+
+// LAYOUTS
 import ArticleCombo_component from "../3-articles/combo";
 
 export default function CombosSection():JSX.Element {
 
   const ActualWidth = useSelector((state:redux_type) => state.screen)
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 1222, min: 840 },
-      items: 2,
-      partialVisibilityGutter: 80
-    },
-    desktop: {
-      breakpoint: { max: 840, min: 745 },
-      items: 2,
-      partialVisibilityGutter: 10
-    },
-    tablet: {
-      breakpoint: { max: 745, min: 554 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 554, min: 0 },
-      items: 1
-    }
-  }
 
   return (
     <section>
@@ -47,7 +32,7 @@ export default function CombosSection():JSX.Element {
           ) : (
             <div className={ActualWidth < 555 ? 'max-w-sm m-auto' : ''}>
               <Carousel className={ActualWidth < 555 ? 'max-w-sm' : ''}
-                responsive={responsive}
+                responsive={DATA_responsive_combos}
                 autoPlay={true}
                 infinite={true}
                 autoPlaySpeed={6000}

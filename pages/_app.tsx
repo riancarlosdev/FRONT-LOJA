@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Container_component from '../components/container'
-import Footer_component from '../components/footer'
+import Footer_component from '../layouts/5-footer'
 import ProviderRedux from '../store'
 import '../styles/globals.css'
 

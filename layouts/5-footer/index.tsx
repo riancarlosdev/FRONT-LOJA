@@ -1,8 +1,16 @@
-import Logo1_component from "../temp/logos/1";
-import {AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillLinkedin} from 'react-icons/ai'
 import Link from "next/link";
-import { DATA_categorias } from "../../datas/categorias";
+import {
+  AiFillFacebook, 
+  AiFillInstagram, 
+  AiFillTwitterSquare, 
+  AiFillLinkedin
+} from 'react-icons/ai'
+
+// DATAS
 import { DATA_Footer } from "../../datas/footer";
+
+// COMPONENTS
+import Logo1_component from "../../components/temp/logos/1";
 
 export default function Footer_component():JSX.Element {
   return (

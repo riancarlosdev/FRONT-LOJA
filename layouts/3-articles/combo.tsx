@@ -1,9 +1,8 @@
-type ArticleCombo_type = {
-  img: string
-  description: string
-}
 
 import styles from './styles.module.css'
+
+// TYPES
+import { ArticleCombo_type } from '../../types'
 
 export default function ArticleCombo_component({img, description}:ArticleCombo_type):JSX.Element {
   return (

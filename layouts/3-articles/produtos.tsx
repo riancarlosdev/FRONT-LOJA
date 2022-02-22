@@ -1,15 +1,6 @@
-import { useDispatch, useSelector } from "react-redux"
-import { redux_type } from "../../types"
 
-type Produto_Type = {
-  title: string
-  description: string
-  oldPrice: string
-  price: string
-  img: string
-  alt: string
-  set?: any
-}
+// TYPES
+import { Produto_Type } from "../../types"
 
 export default function Produto_article({set, title, description, oldPrice, price, img, alt}:Produto_Type):JSX.Element {
 
