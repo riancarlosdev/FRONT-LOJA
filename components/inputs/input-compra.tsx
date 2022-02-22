@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 export default function InputTextCompra({name, placeholder, text, require}:InputCompra_type):JSX.Element {
 
   return (
-    <div>
+    <div className="mx-1">
       <div className="space-x-1">
         <span className="text-xs font-semibold uppercase">{text}</span>
         {require && <span className="text-red text-xs">*</span>}

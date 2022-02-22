@@ -23,7 +23,7 @@ export default function Compra_Endereco():JSX.Element {
           </div>
 
           <div className="mt-4 max-w-4xl m-auto">
-            <div className="flex flex-wrap justify-between">
+            <div className="flex sm:justify-between flex-wrap justify-center">
               <div className="w-full max-w-xs my-2">
                 <InputTextCompra name="cep" placeholder="00000-000" require={true} text="CEP" />
               </div>
@@ -36,7 +36,7 @@ export default function Compra_Endereco():JSX.Element {
               <div className="w-full max-w-xs my-2">
                 <InputTextCompra name="endereco" placeholder="Digite o endereco" require={true} text="endereco" />
               </div>
-              <div className="full max-w-xs my-2">
+              <div className="w-full max-w-xs my-2">
                 <InputTextCompra name="complemento" placeholder="Ex: Casa azul ao lado da ..." require={true} text="complemento" />
               </div>
               <div className="w-full max-w-xs my-2">
@@ -49,15 +49,14 @@ export default function Compra_Endereco():JSX.Element {
         <Container_component background="bg-3">
           <div className="my-7">
             <div className="flex justify-center font-semibold space-x-2">
-              <span>ou</span>
-              <span className="uppercase">selecione um endereco salvo</span>
+              <span className="uppercase text-center">ou selecione um endereco salvo</span>
             </div>
 
-            <div className="flex justify-center flex-wrap space-x-4 mt-5">
-              <div className="flex-1 max-w-xs">
+            <div className="flex justify-center flex-wrap mt-5">
+              <div className="flex-1 max-w-xs mx-1 my-1">
                 <CardEndereco_component endereco="Rua jose casemiro pena" numero="28" localizacao="SSP, Bahia - Brasil" value="1" />
               </div>
-              <div className="flex-1 max-w-xs">
+              <div className="flex-1 max-w-xs mx-1 my-1">
                 <CardEndereco_component endereco="Rua jose casemiro pena" numero="28" localizacao="SSP, Bahia - Brasil" value="1" />
               </div>
             </div>

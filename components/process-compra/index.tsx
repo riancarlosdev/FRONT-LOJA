@@ -11,7 +11,7 @@ export default function ProcessCompra_component({ active }:CompraProcess_type):J
               <span className="text-3 font-semibold">1</span>
             </div>
             {active === 1 && (
-              <span className="font-semibold text-sm">Endereco de entrega</span>
+              <span className="text-xs font-semibold sm:text-sm">Endereco de entrega</span>
             )}
           </div>
 
@@ -20,7 +20,7 @@ export default function ProcessCompra_component({ active }:CompraProcess_type):J
               <span className="text-3 font-semibold">2</span>
             </div>
             {active === 2 && (
-              <span className="font-semibold text-sm">Forma de pagamento</span>
+              <span className="text-xs font-semibold sm:text-sm">Forma de pagamento</span>
             )}
           </div>
 
@@ -29,7 +29,7 @@ export default function ProcessCompra_component({ active }:CompraProcess_type):J
               <span className="text-3 font-semibold">3</span>
             </div>
             {active === 3 && (
-              <span className="font-semibold text-sm">Efetuar pagamento</span>
+              <span className="text-xs font-semibold sm:text-sm">Efetuar pagamento</span>
             )}
           </div>
       </div>
