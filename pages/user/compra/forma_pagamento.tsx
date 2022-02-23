@@ -24,7 +24,7 @@ export default function Compra_FormadePagamento():JSX.Element {
 
         <div className="mt-8 md:mt-20 mb-7 max-w-4xl mx-auto w-full">
           <div className="flex flex-wrap md:justify-between justify-center ">
-            <div className="h-80 mb-7 bg-text-1 border-2 border-text-3 border-opacity-10 w-full max-w-sm mx-2">
+            <div className="h-80 bg-text-1 border-2 border-text-3 border-opacity-10 w-full max-w-sm mx-2">
               <VizualizeCompra_component {...DATA_vizualize_compra} />
             </div>  
             <div className="mx-2 space-y-2 max-w-md flex-1 flex flex-col justify-between">
