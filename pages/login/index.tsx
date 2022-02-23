@@ -12,12 +12,15 @@ export default function Login():JSX.Element {
         </Container_component>
 
         <section className="my-24 w-full flex justify-center">
-          <div className="max-w-sm h-96 bg-4 flex justify-center items-center">
+          <div className="max-w-md flex-1 h-96 bg-4 flex justify-center items-center">
             <article className="flex flex-col justify-between py-16 h-full">
-              <h1 className="text-center font-semibold mt-4">Faca o Login na |LOJA|</h1>
+              <div className="text-center mb-5">
+                <h1 className="font-semibold mt-4">Faca o Login na |LOJA|</h1>
+                <span>Bem vindo de volta</span>
+              </div>
               <form>
                 <div className="flex items-end flex-col px-5">
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <div>
                       <InputTextCompra require={false} name="" placeholder="Digite seu E-mail" text="" />
                     </div>
