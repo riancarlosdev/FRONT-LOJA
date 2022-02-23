@@ -30,7 +30,7 @@ export default function VizualizeCompra_component({frete, total, viewProdutos}:V
             <strong>{frete}</strong>
           </li>
           <li className="flex justify-between items-center">
-            <strong>Total:</strong>
+            <strong>Total a pagar:</strong>
             <strong>{total}</strong>
           </li>
         </ul>

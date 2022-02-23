@@ -1,10 +1,10 @@
-import ButtonCompra_component from "../../components/buttons/compra";
-import CardsFormasPagamento_component from "../../components/card-forma-pagamento";
-import Container_component from "../../components/container";
-import ProcessCompra_component from "../../components/process-compra";
-import VizualizeCompra_component from "../../components/vizualize-compra";
-import { DATA_vizualize_compra } from "../../datas/vizualize-compra";
-import HeaderCompra_Layout from "../../layouts/1.header/compra";
+import ButtonCompra_component from "../../../components/buttons/compra";
+import CardsFormasPagamento_component from "../../../components/card-forma-pagamento";
+import Container_component from "../../../components/container";
+import ProcessCompra_component from "../../../components/process-compra";
+import VizualizeCompra_component from "../../../components/vizualize-compra";
+import { DATA_vizualize_compra } from "../../../datas/vizualize-compra";
+import HeaderCompra_Layout from "../../../layouts/1.header/compra";
 
 import styles from './styles.module.css'
 
@@ -43,7 +43,7 @@ export default function Compra_FormadePagamento():JSX.Element {
 
         <div className="flex justify-center w-full flex-1 mt-11 mb-6">
           <div className="max-w-xs flex-1">
-            <ButtonCompra_component name="Continuar" link="/compra/pagamento" />
+            <ButtonCompra_component name="Continuar" link="/user/compra/pagamento" />
           </div>
         </div>
       </main>

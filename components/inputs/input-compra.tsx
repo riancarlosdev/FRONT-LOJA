@@ -13,7 +13,7 @@ export default function InputTextCompra({name, placeholder, text, require}:Input
         <span className="text-xs font-semibold uppercase">{text}</span>
         {require && <span className="text-red text-xs">*</span>}
       </div>
-      <input id={styles.min_input_compra} className="w-full h-11 pl-2 border-2 outline-h-link-3 border-text-2" type="text" name={name} placeholder={placeholder} />
+      <input id={styles.min_input_compra} className="text-sm w-full h-11 pl-2 border-2 outline-h-link-3 border-text-2" type="text" name={name} placeholder={placeholder} />
     </div>  
   )
 }

@@ -1,13 +1,13 @@
 // COMPONENTS
-import ButtonCompra_component from "../../components/buttons/compra";
-import CardEndereco_component from "../../components/card-endereco";
-import CepPreview_component from "../../components/cep-preview";
-import Container_component from "../../components/container";
-import InputTextCompra from "../../components/inputs/input-compra";
-import ProcessCompra_component from "../../components/process-compra";
+import ButtonCompra_component from "../../../components/buttons/compra";
+import CardEndereco_component from "../../../components/card-endereco";
+import CepPreview_component from "../../../components/cep-preview";
+import Container_component from "../../../components/container";
+import InputTextCompra from "../../../components/inputs/input-compra";
+import ProcessCompra_component from "../../../components/process-compra";
 
 // LAYOUTS
-import HeaderCompra_Layout from "../../layouts/1.header/compra";
+import HeaderCompra_Layout from "../../../layouts/1.header/compra";
 
 export default function Compra_Endereco():JSX.Element {
   return (
@@ -65,7 +65,7 @@ export default function Compra_Endereco():JSX.Element {
 
         <div className="flex justify-center w-full flex-1 mt-11 mb-6">
           <div className="max-w-xs flex-1">
-            <ButtonCompra_component name="Continuar" link="/compra/forma_pagamento" />
+            <ButtonCompra_component name="Continuar" link="/user/compra/forma_pagamento" />
           </div>
         </div>
       </main>

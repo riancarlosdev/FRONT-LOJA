@@ -86,3 +86,8 @@ export type CardFormaPagamento_type = {
   name: string
   status?: boolean
 }
+
+export type HeaderUserPublic_type = {
+  link: string
+  name: string
+}
