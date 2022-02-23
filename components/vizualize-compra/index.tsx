@@ -15,7 +15,7 @@ export default function VizualizeCompra_component({frete, total, viewProdutos}:V
             <li className="flex justify-between items-center">
               <div className="space-x-2 md:w-56 w-52">
                 <strong>{e.quantidade}</strong>
-                <span className="text-sm sm:text-base">{e.produto}</span>
+                <span className=" sm:text-base">{e.produto}</span>
               </div>
               <strong>R$ {e.preco}</strong>
             </li>
