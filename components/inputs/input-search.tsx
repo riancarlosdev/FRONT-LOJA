@@ -24,7 +24,7 @@ export default function InputSearch_component({ setState }:InputSearch_type<any>
     <div className={`ease-in-out duration-700 w-full`}>
       <form onSubmit={handleSubmit} name='form' id='form'>
         <div className='relative overflow-hidden w-full rounded-full'>
-          <input onFocus={handleFocusInput} onBlur={handleBlurInput} className={`outline-none md:placeholder:text-lg pl-4 sm:pl-7 text-base sm:text-lg pr-14 w-full h-12`} 
+          <input onFocus={handleFocusInput} onBlur={handleBlurInput} className={`duration-500 ease-in-out outline-none md:placeholder:text-lg pl-4 sm:pl-7 text-base sm:text-lg pr-14 w-full h-12`} 
             id='search' 
             type="text" 
             maxLength={50} 

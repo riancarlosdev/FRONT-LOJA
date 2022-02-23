@@ -8,6 +8,7 @@ import { redux_type } from "../../types";
 import Logo1_component from "../../components/temp/logos/1";
 import BagCarrinho_component from "../../components/bag/bag-carrinho";
 import InputSearch_component from "../../components/inputs/input-search";
+import Link from "next/link";
 
 export default function Header_component():JSX.Element {
 
@@ -33,6 +34,10 @@ export default function Header_component():JSX.Element {
         <div className="lg:pl-5">
           <BagCarrinho_component />
         </div>
+
+        <Link href={'/login'}>
+          <a className="bg-1 text-3 text-sm w-28 h-10 flex items-center justify-center font-semibold">Entrar</a>
+        </Link>
       </div>
     </div>
   )
