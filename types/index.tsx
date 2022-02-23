@@ -75,6 +75,7 @@ export type VizualizeCompra_type = {
   frete: string
   total: string
   viewProdutos: Array<{
+    id: number
     preco: string
     produto: string
     quantidade: string

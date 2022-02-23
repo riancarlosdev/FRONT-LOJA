@@ -12,7 +12,7 @@ export default function VizualizeCompra_component({frete, total, viewProdutos}:V
       <div id={styles.previewcompras} className="bg-3 p-1 overflow-y-scroll h-32">
         <ul className="space-y-2">
           {viewProdutos.map(e => (
-            <li className="flex justify-between items-center">
+            <li key={e.id} className="flex justify-between items-center">
               <div className="space-x-2 md:w-56 w-52">
                 <strong>{e.quantidade}</strong>
                 <span className=" sm:text-base">{e.produto}</span>
