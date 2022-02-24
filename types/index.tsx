@@ -57,6 +57,7 @@ export type InputCompra_type = {
   text: string
   require: boolean
   placeholder: string
+  minWidth?: boolean
 }
 
 export type CardEndereco_type = {

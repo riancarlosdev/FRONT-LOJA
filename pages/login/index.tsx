@@ -11,8 +11,8 @@ export default function Login():JSX.Element {
           <HeaderUserPublic_Layout name="Cadastro" link="/cadastro" />
         </Container_component>
 
-        <section className="my-24 w-full flex justify-center">
-          <div className="max-w-md flex-1 h-96 bg-4 flex justify-center items-center">
+        <section className="mt-2 mb-7 sm:my-14 w-full flex justify-center">
+          <div className="max-w-md mx-2 flex-1 h-96 bg-4 flex justify-center items-center">
             <article className="flex flex-col justify-between py-16 h-full">
               <div className="text-center mb-5">
                 <h1 className="font-semibold mt-4">Faca o Login na |LOJA|</h1>
@@ -22,14 +22,14 @@ export default function Login():JSX.Element {
                 <div className="flex items-end flex-col px-5">
                   <div className="space-y-4">
                     <div>
-                      <InputTextCompra require={false} name="" placeholder="Digite seu E-mail" text="" />
+                      <InputTextCompra minWidth={false} require={false} name="" placeholder="Digite seu E-mail" text="" />
                     </div>
                     <div>
-                      <InputTextCompra require={false} name="" placeholder="Digite sua senha" text="" />
+                      <InputTextCompra minWidth={false} require={false} name="" placeholder="Digite sua senha" text="" />
                     </div>
                   </div>
                   <div>
-                    <span className="text-sm" style={{color: 'blue'}}>Esqueceu sua senha?</span>
+                    <span className="text-xs" style={{color: 'blue'}}>Esqueceu sua senha?</span>
                   </div>
                 </div>
 

@@ -10,15 +10,15 @@ export default function Cadastro():JSX.Element {
           <HeaderUserPublic_Layout name="Login" link="/login" />
         </Container_component>
 
-        <section className="my-24 w-full flex justify-center">
-          <div className="max-w-2xl flex-1 bg-4 flex justify-center items-center">
+        <section className="mt-2 mb-7 sm:my-14 w-full flex justify-center">
+          <div className="max-w-2xl flex-1 mx-2 bg-4 flex justify-center items-center">
             <article className="flex flex-col justify-between py-16 h-full">
               <div className="text-center mb-4">
                 <h1 className="font-semibold mt-4">Faca o seu cadastro na |LOJA|</h1>
                 <span>Seja bem vindo</span>
               </div>
               <form className="mt-4">
-                <div className="px-3 md:px-8 flex justify-between flex-wrap">
+                <div className="px-3 md:px-8 flex justify-center sm:justify-between flex-wrap">
                   <div className="my-1 max-w-xs">
                     <InputTextCompra require={false} name="" placeholder="Primeiro nome" text="" />
                   </div>
