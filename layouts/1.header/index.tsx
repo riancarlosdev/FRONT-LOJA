@@ -36,7 +36,7 @@ export default function Header_component():JSX.Element {
         </div>
 
         <Link href={'/login'}>
-          <a className="bg-1 text-3 text-sm w-28 h-10 flex items-center justify-center font-semibold">Entrar</a>
+          <a className={`bg-1 text-3  ${ActualWidth > 640 ? 'text-sm w-28 h-10' : 'text-xs w-24 h-9'} flex items-center justify-center font-semibold`}>Entrar</a>
         </Link>
       </div>
     </div>

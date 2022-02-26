@@ -1,6 +1,3 @@
-
-const size = '40px'
-
 export const DATA_props = {
   initialFocus: true,
   id: 'loja',
