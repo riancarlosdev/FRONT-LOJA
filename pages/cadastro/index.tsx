@@ -1,8 +1,23 @@
+import { ChangeEvent, useState } from "react";
 import Container_component from "../../components/container";
 import InputTextCompra from "../../components/inputs/input-compra";
+import InputDate_component from "../../components/inputs/input-date";
 import HeaderUserPublic_Layout from "../../layouts/1.header/user-public";
 
 export default function Cadastro():JSX.Element {
+
+  const [ valueSubmit, setValueSubmit ] = useState({nome: '', sobrenome: '', email: '', senha: '', confirm_senha: '', genero: '', nascimento: '', cpf: ''})
+
+  const handleSubmit = () => {
+
+  }
+
+  const handleValue = (e:ChangeEvent<HTMLInputElement>) => {
+    setValueSubmit({...valueSubmit, [e.target.name]:e.target.value})
+  }
+
+  console.log(valueSubmit)
+
   return (
     <>
       <main>
@@ -17,31 +32,31 @@ export default function Cadastro():JSX.Element {
                 <h1 className="font-semibold mt-4">Faca o seu cadastro na |LOJA|</h1>
                 <span>Seja bem vindo</span>
               </div>
-              <form className="mt-4">
+              <form onChange={handleSubmit} className="mt-4">
                 <div className="px-3 md:px-8 flex justify-center sm:justify-between flex-wrap">
                   <div className="my-1 max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Primeiro nome" text="" />
+                    <InputTextCompra onChange={handleValue} require={false} name="nome" placeholder="Primeiro nome" text="" />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Segundo nome" text="" />
+                    <InputTextCompra onChange={handleValue} require={false} name="sobrenome" placeholder="Segundo nome" text="" />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="E-mail" text="" />
+                    <InputTextCompra type="email" onChange={handleValue} require={false} name="email" placeholder="E-mail" text="" />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Senha" text="" />
+                    <InputTextCompra type="password" onChange={handleValue} require={false} name="senha" placeholder="Senha" text="" />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Confirmar senha" text="" />
+                    <InputTextCompra type="password" onChange={handleValue} require={false} name="confirm_senha" placeholder="Confirmar senha" text="" />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Data de nascimento" text="" />
+                    <InputDate_component type="date" change={handleValue} />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="CPF" text="" />
+                    <InputDate_component type="cpf" change={handleValue} />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra require={false} name="" placeholder="Genero" text="" />
+                    <InputTextCompra onChange={handleValue} require={false} name="genero" placeholder="Genero" text="" />
                   </div>
                 </div>
 
