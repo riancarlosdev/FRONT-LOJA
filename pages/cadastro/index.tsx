@@ -2,21 +2,30 @@ import { ChangeEvent, useState } from "react";
 import Container_component from "../../components/container";
 import InputTextCompra from "../../components/inputs/input-compra";
 import InputDate_component from "../../components/inputs/input-date";
+import InputSelectCompra from "../../components/inputs/input-select";
 import HeaderUserPublic_Layout from "../../layouts/1.header/user-public";
+import { BaseApi } from "../../utils/base-api";
 
 export default function Cadastro():JSX.Element {
 
   const [ valueSubmit, setValueSubmit ] = useState({nome: '', sobrenome: '', email: '', senha: '', confirm_senha: '', genero: '', nascimento: '', cpf: ''})
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e:ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
+    try {
+      const response = await BaseApi.post('/user/register', valueSubmit)
+      
+      // PEGAR O TOKEN E JOGAR NO LOCALSTORE OU COOKIE
+
+    } catch (error: any) {
+      console.log(error.response.data.message)
+    }
   }
 
   const handleValue = (e:ChangeEvent<HTMLInputElement>) => {
     setValueSubmit({...valueSubmit, [e.target.name]:e.target.value})
   }
-
-  console.log(valueSubmit)
 
   return (
     <>
@@ -32,7 +41,7 @@ export default function Cadastro():JSX.Element {
                 <h1 className="font-semibold mt-4">Faca o seu cadastro na |LOJA|</h1>
                 <span>Seja bem vindo</span>
               </div>
-              <form onChange={handleSubmit} className="mt-4">
+              <form onSubmit={handleSubmit} className="mt-4">
                 <div className="px-3 md:px-8 flex justify-center sm:justify-between flex-wrap">
                   <div className="my-1 max-w-xs">
                     <InputTextCompra onChange={handleValue} require={false} name="nome" placeholder="Primeiro nome" text="" />
@@ -56,7 +65,7 @@ export default function Cadastro():JSX.Element {
                     <InputDate_component type="cpf" change={handleValue} />
                   </div>
                   <div className="my-1  max-w-xs">
-                    <InputTextCompra onChange={handleValue} require={false} name="genero" placeholder="Genero" text="" />
+                    <InputSelectCompra onChange={handleValue}  name="genero" placeholder="" text="" require={false} />
                   </div>
                 </div>
 
