@@ -20,6 +20,10 @@ export type redux_type = {
   side: {
     open: boolean
   }
+  flash: {
+    message: string;
+    open: boolean;
+  }
 }
 
 export type InputSearch_type<T> = {
@@ -93,4 +97,8 @@ export type CardFormaPagamento_type = {
 export type HeaderUserPublic_type = {
   link: string
   name: string
+}
+
+export type FlashMessage_reducer = {
+  message: string
 }

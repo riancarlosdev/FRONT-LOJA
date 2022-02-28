@@ -3,6 +3,7 @@ import Container_component from '../components/container'
 import Footer_component from '../layouts/5-footer'
 import ProviderRedux from '../store'
 import '../styles/globals.css'
+import 'react-notifications/lib/notifications.css';
 
 export default function MyApp({ Component, pageProps }:any) {
   return (

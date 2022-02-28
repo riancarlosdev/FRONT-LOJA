@@ -1,25 +1,42 @@
 import { ChangeEvent, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Container_component from "../../components/container";
 import InputTextCompra from "../../components/inputs/input-compra";
 import InputDate_component from "../../components/inputs/input-date";
 import InputSelectCompra from "../../components/inputs/input-select";
 import HeaderUserPublic_Layout from "../../layouts/1.header/user-public";
+import { redux_type } from "../../types";
 import { BaseApi } from "../../utils/base-api";
+
+import { NotificationContainer } from 'react-notifications';
 
 export default function Cadastro():JSX.Element {
 
   const [ valueSubmit, setValueSubmit ] = useState({nome: '', sobrenome: '', email: '', senha: '', confirm_senha: '', genero: '', nascimento: '', cpf: ''})
 
+  const dispatch = useDispatch()
+
   const handleSubmit = async (e:ChangeEvent<HTMLFormElement>) => {
+
     e.preventDefault()
 
     try {
-      const response = await BaseApi.post('/user/register', valueSubmit)
-      
-      // PEGAR O TOKEN E JOGAR NO LOCALSTORE OU COOKIE
+      const {data: {message}} = await BaseApi.post('/user/register', valueSubmit)
 
+      dispatch({
+        type: 'SUCESS',
+        payload: {
+          message: message
+        }
+      })
     } catch (error: any) {
       console.log(error.response.data.message)
+      dispatch({
+        type: 'ERROR',
+        payload: {
+          message: error.response.data.message
+        }
+      })
     }
   }
 
@@ -43,28 +60,28 @@ export default function Cadastro():JSX.Element {
               </div>
               <form onSubmit={handleSubmit} className="mt-4">
                 <div className="px-3 md:px-8 flex justify-center sm:justify-between flex-wrap">
-                  <div className="my-1 max-w-xs">
+                  <div className="my-1  w-72">
                     <InputTextCompra onChange={handleValue} require={false} name="nome" placeholder="Primeiro nome" text="" />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1  w-72">
                     <InputTextCompra onChange={handleValue} require={false} name="sobrenome" placeholder="Segundo nome" text="" />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1  w-72">
                     <InputTextCompra type="email" onChange={handleValue} require={false} name="email" placeholder="E-mail" text="" />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1  w-72">
                     <InputTextCompra type="password" onChange={handleValue} require={false} name="senha" placeholder="Senha" text="" />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1  w-72">
                     <InputTextCompra type="password" onChange={handleValue} require={false} name="confirm_senha" placeholder="Confirmar senha" text="" />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1 w-72">
                     <InputDate_component type="date" change={handleValue} />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1 w-72">
                     <InputDate_component type="cpf" change={handleValue} />
                   </div>
-                  <div className="my-1  max-w-xs">
+                  <div className="my-1 w-72">
                     <InputSelectCompra onChange={handleValue}  name="genero" placeholder="" text="" require={false} />
                   </div>
                 </div>
@@ -81,6 +98,7 @@ export default function Cadastro():JSX.Element {
           </div>
         </section>
       </main>
+      <NotificationContainer />
     </>
   )
 }
