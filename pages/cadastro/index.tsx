@@ -1,11 +1,14 @@
 import { ChangeEvent, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+
 import Container_component from "../../components/container";
 import InputTextCompra from "../../components/inputs/input-compra";
 import InputDate_component from "../../components/inputs/input-date";
 import InputSelectCompra from "../../components/inputs/input-select";
+
 import HeaderUserPublic_Layout from "../../layouts/1.header/user-public";
-import { redux_type } from "../../types";
+
 import { BaseApi } from "../../utils/base-api";
 
 import { NotificationContainer } from 'react-notifications';
@@ -15,6 +18,7 @@ export default function Cadastro():JSX.Element {
   const [ valueSubmit, setValueSubmit ] = useState({nome: '', sobrenome: '', email: '', senha: '', confirm_senha: '', genero: '', nascimento: '', cpf: ''})
 
   const dispatch = useDispatch()
+  const route = useRouter()
 
   const handleSubmit = async (e:ChangeEvent<HTMLFormElement>) => {
 
@@ -29,6 +33,10 @@ export default function Cadastro():JSX.Element {
           message: message
         }
       })
+
+      setTimeout(() => {
+        route.push('/cadastro/confirm')
+      }, 1500)
     } catch (error: any) {
       console.log(error.response.data.message)
       dispatch({
